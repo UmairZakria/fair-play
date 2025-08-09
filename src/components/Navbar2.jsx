@@ -55,7 +55,7 @@ const Navbar2 = () => {
                 src="https://img.icons8.com/?size=28&id=g0YrFYUO2fCr&format=png&color=FFFFFF"
                 alt=""
               />
-            </span>
+             </span>
             <span className="border-r-[1px] pr-2 border-white/40">
               <Repeat1 />
             </span>
@@ -89,3 +89,12 @@ const Navbar2 = () => {
 };
 
 export default Navbar2;
+
+
+Write the README File
+Your README should include:
+Project Title (e.g., “Casino Detail Page - Snappy Byte Task”)
+Description – Short explanation of what the project is.
+How to Run Locally – step-by-step commands.
+Live Link – @https://fair-play-theta.vercel.app/ 
+Screenshots –  adds a good touch.

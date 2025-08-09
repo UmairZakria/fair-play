@@ -1,12 +1,46 @@
-# React + Vite
+# Casino Detail Page - Snappy Byte Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+A modern, interactive casino roulette detail page built with React and Vite. The project features a visually rich UI, animated betting table, and responsive design, simulating a real casino experience. It includes a roulette wheel, betting table, balance display, and chat/support sidebar, all styled with Tailwind CSS and Framer Motion for smooth animations.
 
-Currently, two official plugins are available:
+## How to Run Locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Clone the repository:**
+   ```bash
+   git clone <your-repo-url>
+   cd snappy-byte
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:5173](http://localhost:5173) in your browser to view the app.
 
-## Expanding the ESLint configuration
+## Live Link
+[https://fair-play-theta.vercel.app/](https://fair-play-theta.vercel.app/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Screenshots
+Add screenshots of the main page, roulette table, and betting interface here for a better visual overview.
+
+---
+
+### Tech Stack
+- React 19
+- Vite
+- Tailwind CSS
+- Framer Motion
+- Lucide React Icons
+
+### Features
+- Animated roulette wheel and betting table
+- Responsive layout for desktop and mobile
+- Modern casino-inspired UI
+- Chat and support sidebar
+
+---
+
+Feel free to contribute or use this as a starting point for your own casino UI projects!
