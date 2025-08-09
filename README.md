@@ -24,7 +24,7 @@ A modern, interactive casino roulette detail page built with React and Vite. The
 [https://fair-play-theta.vercel.app/](https://fair-play-theta.vercel.app/)
 
 ## Screenshots
-Add screenshots of the main page, roulette table, and betting interface here for a better visual overview.
+![home screenshot](./public/home.jpeg)
 
 ---
 
