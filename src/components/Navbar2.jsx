@@ -11,8 +11,8 @@ import {
   Settings,
   Maximize2,
 } from "lucide-react";
-// import Button from "./Button";
-import Button from "./button";
+import Button from "./Button";
+// import Button from "./button";
 import Leftnav from "./Leftnav";
 const Navbar2 = () => {
   const [enabled, setEnabled] = useState(true);
