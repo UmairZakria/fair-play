@@ -57,41 +57,29 @@ const Navbar2 = () => {
               />
             </span>
             <span className="border-r-[1px] pr-2 border-white/40">
-              {/* <svg xmlns="http://www.w3.org/2000/svg" className="border h-8 w-8" viewBox="0 0 24 24"><use href="#g-autoplay-default"></use>0</svg> */}
               <Repeat1 />
             </span>
             <span className="border-r-[1px] pr-2 border-white/40">
-              {/* <img src="https://img.icons8.com/?size=28&id=g0YrFYUO2fCr&format=png&color=FFFFFF" alt="" /> */}
               <ChartNoAxesColumn />
             </span>
             <span className="border-r-[1px] pr-2 border-white/40">
-              {/* <img src="https://img.icons8.com/?size=28&id=g0YrFYUO2fCr&format=png&color=FFFFFF" alt="" /> */}
               <ArrowUpDown />
             </span>
             <span className="border-r-[1px] pr-2 border-white/40">
-              {/* <img src="https://img.icons8.com/?size=28&id=g0YrFYUO2fCr&format=png&color=FFFFFF" alt="" /> */}
               <History />
             </span>
             <span className="border-r-[1px] pr-2 border-white/40">
-              {/* <img src="https://img.icons8.com/?size=28&id=g0YrFYUO2fCr&format=png&color=FFFFFF" alt="" /> */}
               <Volume2 />
             </span>
             <span className="border-r-[1px] pr-2 border-white/40">
-              {/* <img src="https://img.icons8.com/?size=28&id=g0YrFYUO2fCr&format=png&color=FFFFFF" alt="" /> */}
               <Info />
             </span>
 
             <span className="border-r-[1px] pr-2 border-white/40">
-              {/* <img src="https://img.icons8.com/?size=28&id=g0YrFYUO2fCr&format=png&color=FFFFFF" alt="" /> */}
               <Settings />
             </span>
             <span className="border-r-[1px] pr-2 border-white/40">
-              {/* <img
-                src="https://img.icons8.com/?size=28&id=g0YrFYUO2fCr&format=png&color=FFFFFF"
-                alt=""
-              /> */}
               <Maximize2 />
-              {/* <Minimize2 /> */}
             </span>
           </div>
         </div>
