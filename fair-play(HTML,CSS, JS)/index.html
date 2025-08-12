@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snappy Byte - Vanilla</title>
+
+    <!-- No Tailwind: using pure CSS in styles.css -->
+
+    <!-- Lucide icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="bg-black overflow-auto">
+    <!-- Original top Navbar -->
+    <div class="flex justify-between h-[50px] p-2 text-white relative z-50">
+      <div class="flex items-center justify-center">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 64 64" class="fill-white z-[50]">
+          <path d="M 32 8 C 31.08875 8 30.178047 8.3091875 29.435547 8.9296875 L 8.8007812 26.171875 C 8.0357812 26.810875 7.7634844 27.925203 8.2714844 28.783203 C 8.9184844 29.875203 10.35025 30.088547 11.28125 29.310547 L 31.677734 12.269531 C 31.864734 12.113531 32.135266 12.113531 32.322266 12.269531 L 52.71875 29.3125 C 53.09275 29.6255 53.546047 29.777344 53.998047 29.777344 C 54.693047 29.777344 55.382672 29.416656 55.763672 28.722656 C 56.228672 27.874656 55.954891 26.803594 55.212891 26.183594 L 52 23.498047 L 52 15 C 52 13.895 51.105 13 50 13 L 48 13 C 46.895 13 46 13.895 46 15 L 46 18.484375 L 34.564453 8.9296875 C 33.821953 8.3091875 32.91125 8 32 8 z M 32 16 L 12 32.705078 L 12 47 C 12 49.761 14.239 52 17 52 L 47 52 C 49.761 52 52 49.761 52 47 L 52 32.705078 L 32 16 z M 28 32 L 36 32 C 37.105 32 38 32.895 38 34 L 38 48 L 26 48 L 26 34 C 26 32.895 26.895 32 28 32 z"></path>
+        </svg> -->
+        <img src="https://img.icons8.com/?size=100&id=qBlNlefkEJPq&format=png&color=FFFFFF" style="width: 28px; object-fit: cover;" alt="">
+        <!-- <span class=""><i data-lucide="icon-house"></i></span> -->
+
+        <img src="./assets/images/logo.png" class="w-[90px] object-cover" alt="logo" />
+      </div>
+      <div class="flex items-center justify-center gap-2">
+        <img src="https://img.icons8.com/color/48/businessman.png" class="size-[25px] rounded-full bg-[#010027]" alt="user" />
+        <div class="uppercase font-medium text-xs">demo123</div>
+      </div>
+    </div>
+    <!-- Bottom gradient overlay -->
+    <div class="bottom-gradient pointer-events-none"></div>
+
+    <!-- Main container -->
+    <div class="flex flex-col justify-between relative w-full md:w-[90vw] mx-auto h-[100vw] md:h-[calc(100vh-50px)]">
+      <!-- Background image -->
+      <img
+        src="./assets/images/background.jpg"
+        alt="background"
+        class="absolute inset-0 h-full w-full object-cover object-center"
+      />
+
+      <!-- Top navigation and left panel -->
+      <div class="relative z-50 text-white px-4 py-2 md:scale-100 scale-50">
+        <div class="flex items-start justify-between">
+          <!-- Left section -->
+          <div class="flex flex-col gap-4">
+              <div  class="flex items-center gap-3 ">
+              <div class="inline-flex gap-2 items-center font-semibold text-sm">
+                <i data-lucide="layout-grid"></i>
+                <span>Lobby</span>
+              </div>
+              <div class="inline-flex gap-2 items-center font-semibold text-sm">
+                <img src="https://img.icons8.com/fluency/28/great-britain-circular.png" alt="flag" />
+                <span>Roulette Speed</span>
+              </div>
+              <div class="text-[#E2B76C] font-semibold text-sm">CLP 100-2500000</div>
+            </div>
+
+            <!-- Left nav tabs + input -->
+              <div style="margin-top: 10px;" class="space-y-2 w-[300px] flex flex-col">
+              <div class="flex w-full gap-2">
+                <div class="left-tabs-container relative flex w-full rounded-xl bg-[#000000ad] backdrop-blur-sm overflow-hidden">
+                  <div id="tab-indicator" class="tab-indicator"></div>
+                  <button id="tab-chat" class="left-tab relative t z-10 flex-1 flex items-center justify-center gap-2 py-3 px-4 text-[#E2B76C] transition-colors duration-300">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span class="text-sm font-medium">Chat</span>
+                  </button>
+                  <button id="tab-support" class="left-tab relative z-10 flex-1 flex items-center justify-center gap-2 py-3 px-4 text-white/80 transition-colors duration-300">
+                    <i data-lucide="headset" class="w-4 h-4"></i>
+                    <span class="text-sm font-medium">Support</span>
+                  </button>
+                </div>
+                <button id="tab-bell" class="left-bell relative z-10 flex rounded-xl items-center bg-[#000000ad] backdrop-blur-sm justify-center gap-2 px-4 text-[#E2B76C] transition-colors duration-200">
+                  <i data-lucide="bell" class="w-5 h-5"></i>
+                </button>
+              </div>
+
+              <div class="left-input-row">
+                <input id="message-input" type="text" placeholder="Enter message here" class="focus:outline-none" />
+                <button class="px-4 "><i data-lucide="send" class="w-5 h-5 "></i></button>
+                <button class="px-[18px] py-2 "><i data-lucide="chevron-down" class="w-4 h-4"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right section -->
+          <div class="flex md:scale-90">
+            <!-- Aurum toggle -->
+            <div class="scale-90 mr-2 ">
+              <button id="aurum-toggle" class="relative w-[120px] shadow-sm shadow-[#F5C857] bg-[#121110] h-10 rounded-full transition-all duration-500 ease-in-out overflow-hidden">
+                <div id="aurum-slider" style="top: 50%; transform: translateY(-50%);" class="absolute  flex w-fit items-center transition-all duration-500 ease-in-out transform left-10">
+                  <div id="aurum-chip" class="rounded-full h-8 flex items-center justify-center px-[14px] transition-all duration-500 ease-out bg-gradient-to-r border border-gold [background:linear-gradient(to_right,_#E8A363,_#F3DEB3,_#F5C857)] shadow-lg">
+                    <span id="aurum-label" class="text-sm font-medium text-primary">Aurum</span>
+                  </div>
+                </div>
+                <div id="aurum-off" class="absolute top-2 bottom-2 left-2 w-8 rounded-full flex items-center justify-center">
+                  <span class="text-[12px] font-semibold text-[#E2B76C]">ON</span>
+                </div>
+                <div id="aurum-on" class="absolute top-2 bottom-2 right-2 w-8 rounded-full flex items-center justify-center">
+                  <span class="text-[12px] font-semibold text-gray-300/50">OFF</span>
+                </div>
+              </button>
+            </div>
+
+            <div class="flex items-center text-white/80 gap-3">
+              <span class="border-r pr-2 border-white/40">
+                <img src="https://img.icons8.com/?size=28&id=g0YrFYUO2fCr&format=png&color=FFFFFF" alt="" />
+              </span>
+              <span class="border-r pr-2 border-white/40"><i data-lucide="repeat-1"></i></span>
+              <span class="border-r pr-2 border-white/40"><i data-lucide="chart-no-axes-column"></i></span>
+              <span class="border-r pr-2 border-white/40"><i data-lucide="arrow-up-down"></i></span>
+              <span class="border-r pr-2 border-white/40"><i data-lucide="history"></i></span>
+              <span class="border-r pr-2 border-white/40"><i data-lucide="volume-2"></i></span>
+              <span class="border-r pr-2 border-white/40"><i data-lucide="info"></i></span>
+              <span class="border-r pr-2 border-white/40"><i data-lucide="settings"></i></span>
+              <span class="border-r pr-2 border-white/40"><i data-lucide="maximize-2"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Board with roulette and betting table -->
+      <div class="relative z-[999] md:scale-100 scale-[30%] w-full ">
+        <div class="relative z-[50] h-[165px]">
+          <img src="./assets/svgs/roulete.svg" class="w-[260px] object-cover" alt="roulette" />
+
+          <!-- Balance boxes -->
+          <div class="absolute flex gap-3 w-[240px] h-[40px] bottom-2 left-2 z-[9999]">
+            <div class="flex flex-col w-full px-2 py-1 rounded-xl bg-[#0F0F0E] text-white">
+              <span class="font-medium tracking-wide text-white/50 text-[10px]">Balance</span>
+              <span class="font-medium tracking-wide text-white text-xs">0CPL</span>
+            </div>
+            <div class="flex flex-col w-full px-2 py-1 rounded-xl bg-[#0F0F0E] text-white">
+              <span class="font-medium tracking-wide text-white/50 text-[10px]">Balance</span>
+              <span class="font-medium tracking-wide text-white text-xs">0CPL</span>
+            </div>
+          </div>
+
+          <!-- Betting table -->
+          <div class="absolute bottom-0 left-1/2 -translate-x-1/2 z-[9999]">
+            <div class="tilt-wrapper">
+              <div class="tilt">
+                <div class="flex gap-0.5">
+                  <div class="flex flex-col">
+                    <button class="w-10 h-28 bg-[#17732E] rounded-md text-white font-bold text-lg border border-white/30 hover:bg-[#17732E]/95 transition-colors">0</button>
+                  </div>
+
+                  <div id="numbers-grid" class="grid grid-cols-12 gap-0.5"></div>
+
+                  <div class="flex flex-col gap-0.5">
+                    <button class="w-10 h-9 rounded-sm bg-[#121110] text-white/60 text-xs font-bold border border-white/30 hover:bg-[#121110]/95 transition-colors">2to1</button>
+                    <button class="w-10 h-9 rounded-sm bg-[#121110] text-white/60 text-xs font-bold border border-white/30 hover:bg-[#121110]/95 transition-colors">2to1</button>
+                    <button class="w-10 h-9 rounded-sm bg-[#121110] text-white/60 text-xs font-bold border border-white/30 hover:bg-[#121110]/95 transition-colors">2to1</button>
+                  </div>
+                </div>
+
+                <div class="flex gap-0.5 mt-0.5">
+                  <div class="w-12"></div>
+                  <button class="flex-1 h-8 bg-[#121110] text-white/60 text-xs rounded-md font-bold border border-white/20 hover:bg-[#121110]/90 transition-colors">1st12</button>
+                  <button class="flex-1 h-8 bg-[#121110] text-white/60 text-xs rounded-md font-bold border border-white/20 hover:bg-[#121110]/90 transition-colors">2nd12</button>
+                  <button class="flex-1 h-8 bg-[#121110] text-white/60 text-xs rounded-md font-bold border border-white/20 hover:bg-[#121110]/90 transition-colors">3rd12</button>
+                  <div class="w-12"></div>
+                </div>
+
+                <div class="flex gap-0.5 mt-0.5">
+                  <div class="w-12"></div>
+                  <div class="flex gap-0.5 flex-1">
+                    <button class="flex-1 h-8 text-white/60 text-xs font-semibold bg-[#121110] border border-white/30  rounded-md transition-colors">1 - 18</button>
+                    <button class="flex-1 h-8 text-white/60 text-sm font-semibold bg-[#121110] border border-white/30 hover:bg-[#121110]/95 rounded-md transition-colors">Even</button>
+                    <button class="flex-1 h-8 bg-[#121110] border border-white/30 hover:bg-[#121110]/95 rounded-md flex items-center justify-center">
+                      <div class="w-4 h-4 bg-[#B2121F] rotate-45 border border-[#B2121F]"></div>
+                    </button>
+                    <button class="flex-1 h-8 bg-[#121110] border border-white/30 hover:bg-[#121110]/95 rounded-md flex items-center justify-center">
+                      <div class="w-4 h-4 bg-[#121110] rotate-45 border border-white/30"></div>
+                    </button>
+                    <button class="flex-1 h-8 bg-[#121110] border border-white/30 hover:bg-[#121110]/95 rounded-md text-white/60 transition-colors">Odd</button>
+                    <button class="flex-1 h-8 text-white/60 text-sm font-semibold bg-[#121110] border border-white/30 hover:bg-[#121110]/95 rounded-md transition-colors">19 - 36</button>
+                    <div class="w-12"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+  <script>
+    // Initialize lucide icons after DOM is ready
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    });
+  </script>
+</html>
+
+

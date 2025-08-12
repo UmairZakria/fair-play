@@ -7,7 +7,7 @@ A modern, interactive casino roulette detail page built with React and Vite. The
 
 1. **Clone the repository:**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/UmairZakria/fair-play
    cd snappy-byte
    ```
 2. **Install dependencies:**
